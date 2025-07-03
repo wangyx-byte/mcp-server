@@ -8,12 +8,14 @@ import logging
 from .sign import request, get_authorization_credentials
 import json
 from mcp.server.fastmcp import FastMCP
-
+import os
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
-mcp = FastMCP("Nacos")
+mcp = FastMCP("Nacos", stateless_http=True, json_response=True)
+# Enable JSON response & stateless HTTP by default
+os.environ["FASTMCP_JSON_RESPONSE"] = "true"
 
 #生成随机名称：mcp-random-string
 def generate_random_name(prefix="mcp", length=8):
