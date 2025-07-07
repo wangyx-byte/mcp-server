@@ -130,18 +130,18 @@ use [`uvx`](https://docs.astral.sh/uv/guides/tools/) to directly run *mcp-server
 账号开白后，登录[火山引擎控制台](https://console.volcengine.com/eip/region:eip+ap-southeast-1/vortexips/serpCreate)， 
 按下图所示，创建公网接入模式的SERP实例。
 
-<img src="vt_serp.png" width="600" height="250">
+<img src="https://lf3-beecdn.bytetos.com/obj/ies-fe-bee-upload/bee_prod/biz_950/tos_3f5039f428034541456c70fe4709b185.png" width="600" height="250">
 
 实例服务接入点地址，即为对应的ENDPOINT，创建完成后可以直接复制。
 
 
-<img src="serp_endpoint.png" width="600" height="200">
+<img src="https://lf3-beecdn.bytetos.com/obj/ies-fe-bee-upload/bee_prod/biz_950/tos_9d9048982dc210b81007085763471aa1.png" width="600" height="200">
 
 ### 获取 TOKEN
 创建SERP实例完成后，在[火山引擎控制台](https://console.volcengine.com/eip/region:eip+ap-southeast-1/vortexips?)， 
 按下图所示，创建API Key。
 
-<img src="serp_token.png" width="600" height="150">
+<img src="https://lf3-beecdn.bytetos.com/obj/ies-fe-bee-upload/bee_prod/biz_950/tos_7ea16a5d86207c5e37c2543c3087e46f.png" width="600" height="150">
 
 API Key，即为对应的TOKEN，创建完成后可以直接复制。
 
