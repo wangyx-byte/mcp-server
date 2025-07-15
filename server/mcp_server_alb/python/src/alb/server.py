@@ -1,6 +1,6 @@
 # coding:utf-8
 
-from vcloud.veen.mcp_server import create_mcp_server
+from src.alb.mcp_server import create_mcp_server
 from dotenv import load_dotenv
 import asyncio
 import sys
@@ -11,7 +11,7 @@ load_dotenv()
 
 def main():
     try:
-        parser = argparse.ArgumentParser(description="Run the VEEN MCP Server")
+        parser = argparse.ArgumentParser(description="Run the ALB MCP Server")
         parser.add_argument(
             "--transport",
             "-t",

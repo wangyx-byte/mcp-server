@@ -1,8 +1,8 @@
 
 [project]
-name = "mcp-server-veen"
+name = "mcp_server_alb"
 version = "0.1.0"
-description = "MCP server for veen"
+description = "MCP server for alb"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
@@ -15,7 +15,7 @@ dependencies = [
 ]
 
 [project.scripts]
-mcp-server-veen= "vcloud.veen.server:main"
+mcp_server_alb= "src.alb.server:main"
 
 
 [build-system]
