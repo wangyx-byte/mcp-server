@@ -180,6 +180,7 @@ MCP Server列表 与 **[火山引擎大模型生态广场](https://www.volcengin
 - **[Figma](https://github.com/GLips/Figma-Context-MCP)**：为 Agent 提供 Figma 文件的布局和样式信息，增强它们准确生成设计的能力。  
 - **[EverArt](https://github.com/modelcontextprotocol/servers/tree/main/src/everart)**：AI image generation using various models.  
 - **[联网问答Agent](https://github.com/volcengine/mcp-server/tree/main/server/mcp_server_askecho)**：基于联网搜索结果，提供端到端的AI问答能力。
+- **[SearchInfinity](https://github.com/volcengine/mcp-server/tree/main/server/mcp_server_askecho_search_infinity)**：提供联网搜索能力，助力AI大模型获取知识、提升回复准确性。
 
 
 ### **源码管理**  
