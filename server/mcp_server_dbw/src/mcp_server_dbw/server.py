@@ -17,8 +17,9 @@ logger = logging.getLogger("dbw_mcp_server")
 
 # 初始化MCP服务
 mcp_server = FastMCP("DBW MCP Server",
-                     host=os.getenv("MCP_SERVER_HOST", "127.0.0.1"),
-                     port=int(os.getenv("MCP_SERVER_PORT", "8000")))
+                     host=os.getenv("MCP_SERVER_HOST", "0.0.0.0"),
+                     port=int(os.getenv("MCP_SERVER_PORT", "8000")),
+                     streamable_http_path=os.getenv("STREAMABLE_HTTP_PATH", "/mcp"))
 REMOTE_MCP_SERVER = False
 
 DBW_CLIENT = DBWClient(
