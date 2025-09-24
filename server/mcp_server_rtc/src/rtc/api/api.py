@@ -3,7 +3,7 @@ from .config import *
 import os
 
 
-class ConversationalaiAPI(BaseService):
+class RtcAPI(BaseService):
 
     def __init__(self):
         if os.getenv("VOLCENGINE_REGION") is None:

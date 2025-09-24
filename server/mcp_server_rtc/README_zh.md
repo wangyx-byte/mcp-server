@@ -110,14 +110,16 @@ python -m mcp_server_git
 ```json
 {
   "mcpServers": {
-    "mcp-server-conversationalAI": {
+    "mcp-server-rtc": {
       "command": "uvx",
       "args": [
         "--from",
-        "git+https://github.com/volcengine/mcp-server#subdirectory=server/mcp_server_conversationalAI",
-        "mcp-server-conversationalAI"
+        "git+https://github.com/volcengine/mcp-server#subdirectory=server/mcp_server_rtc",
+        "mcp-server-rtc"
       ],
       "env": {
+        "MCP_SERVER_PORT": "<PORT>",
+        "MCP_SERVER_HOST": "<HOST>",
         "VOLCENGINE_ACCESS_KEY": "your access-key-id",
         "VOLCENGINE_SECRET_KEY": "your access-key-secret"
       }
@@ -131,14 +133,16 @@ or
 ```json
 {
   "mcpServers": {
-    "mcp-server-conversationalAI": {
+    "mcp-server-rtc": {
       "command": "uvx",
       "args": [
         "--from",
-        "/ABSOLUTE/PATH/TO/PARENT/mcp-server/server/mcp_server_conversationalAI",
-        "mcp-server-conversationalAI"
+        "/ABSOLUTE/PATH/TO/PARENT/mcp-server/server/mcp_server_rtc",
+        "mcp-server-rtc"
       ],
       "env": {
+        "MCP_SERVER_PORT": "<PORT>",
+        "MCP_SERVER_HOST": "<HOST>",
         "VOLCENGINE_ACCESS_KEY": "your access-key-id",
         "VOLCENGINE_SECRET_KEY": "your access-key-secret"
       }

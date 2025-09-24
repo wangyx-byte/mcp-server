@@ -3,13 +3,13 @@ from volcengine.Credentials import Credentials
 from volcengine.ApiInfo import ApiInfo
 
 api_info = {
-    "Conversational_aiMcpStartVoiceChat": ApiInfo(
+    "RtcMcpStartVoiceChat": ApiInfo(
         "POST", "/", {"Action": "StartVoiceChat", "Version": "2024-12-01"}, {}, {}
     ),
-    "Conversational_aiMcpUpdateVoiceChat": ApiInfo(
+    "RtcMcpUpdateVoiceChat": ApiInfo(
         "POST", "/", {"Action": "UpdateVoiceChat", "Version": "2024-12-01"}, {}, {}
     ),
-    "Conversational_aiMcpStopVoiceChat": ApiInfo(
+    "RtcMcpStopVoiceChat": ApiInfo(
         "POST", "/", {"Action": "StopVoiceChat", "Version": "2024-12-01"}, {}, {}
     ),
 }

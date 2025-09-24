@@ -1,6 +1,6 @@
 # coding:utf-8
 
-from src.conversationalAI.mcp_server import create_mcp_server
+from src.rtc.mcp_server import create_mcp_server
 
 from dotenv import load_dotenv
 import asyncio
@@ -12,9 +12,7 @@ load_dotenv()
 
 def main():
     try:
-        parser = argparse.ArgumentParser(
-            description="Run the CONVERSATIONALAI MCP Server"
-        )
+        parser = argparse.ArgumentParser(description="Run the RTC MCP Server")
         parser.add_argument(
             "--transport",
             "-t",

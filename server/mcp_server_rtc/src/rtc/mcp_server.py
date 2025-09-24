@@ -1,13 +1,14 @@
-from src.conversationalAI.api.api import ConversationalaiAPI
+from src.rtc.api.api import RtcAPI
 from mcp.server.fastmcp import FastMCP
 from .note import note
 import json
+import os
 
 
 def create_mcp_server():
-    service = ConversationalaiAPI()
+    service = RtcAPI()
     mcp = FastMCP(
-        name="对话式 AI MCP",
+        name="mcp_server_rtc",
         instructions="""
       ## MCP Invocation Method Guide
       - For task decomposition, it is necessary to use the mcp tool.
@@ -15,6 +16,9 @@ def create_mcp_server():
       - Subsequently, the corresponding method should be called to retrieve the data.
         豆包实时通话同款音视频服务，整合 LLM、VLM、ASR、TTS、以及音视频处理/传输能力，快速实现用户与大模型间流畅、自然、真人感的实时对话功能
       """,
+        host=os.getenv("MCP_SERVER_HOST", "0.0.0.0"),
+        port=int(os.getenv("MCP_SERVER_PORT", "8000")),
+        streamable_http_path=os.getenv("STREAMABLE_HTTP_PATH", "/mcp")
     )
 
     @mcp.tool()
@@ -47,9 +51,7 @@ def create_mcp_server():
         1. Pass "start_voice_chat" as an input parameter to invoke the `get_note` method to obtain the parameter description.
         2. After obtaining the parameter description, invoke  start_voice_chat
         """
-        reqs = service.mcp_post(
-            "Conversational_aiMcpStartVoiceChat", params, json.dumps(body)
-        )
+        reqs = service.mcp_post("RtcMcpStartVoiceChat", params, json.dumps(body))
 
         return reqs
 
@@ -61,9 +63,7 @@ def create_mcp_server():
         1. Pass "update_voice_chat" as an input parameter to invoke the `get_note` method to obtain the parameter description.
         2. After obtaining the parameter description, invoke  update_voice_chat
         """
-        reqs = service.mcp_post(
-            "Conversational_aiMcpUpdateVoiceChat", params, json.dumps(body)
-        )
+        reqs = service.mcp_post("RtcMcpUpdateVoiceChat", params, json.dumps(body))
 
         return reqs
 
@@ -75,9 +75,7 @@ def create_mcp_server():
         1. Pass "stop_voice_chat" as an input parameter to invoke the `get_note` method to obtain the parameter description.
         2. After obtaining the parameter description, invoke  stop_voice_chat
         """
-        reqs = service.mcp_post(
-            "Conversational_aiMcpStopVoiceChat", params, json.dumps(body)
-        )
+        reqs = service.mcp_post("RtcMcpStopVoiceChat", params, json.dumps(body))
 
         return reqs
 
